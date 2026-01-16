@@ -20,16 +20,38 @@ An **IoT-based Smart Library system** integrating **ESP32**, **RFID**, and a **N
 ```text
 IoT-Smart-Library/
 ├── esp32/
-│   ├── Anti_Thef/
-│   │   └── Anti_Thef.ino
-│   └── Book_Reader/
-│       └── Book_Reader.ino
+│   ├── anti-theft/
+│   │   └── anti-theft.ino
+│   └── book-reader/
+│       └── book-reader.ino
+│
+├── frontend/
+│   ├── public/
+│   │   ├── assets/
+│   │   │   ├── books/
+│   │   │   ├── icons/
+│   │   │   └── media/
+│   │   ├── index.html
+│   │   ├── script.js
+│   │   └── style.css
+│   │
+│   └── book-station/
+│       ├── add-book/
+│       ├── borrow/
+│       ├── return/
+│       ├── scripts/
+│       └── styles/
 │
 ├── server/
-│   ├── package.json
-│   ├── package-lock.json
+│   ├── src/
+│   │   ├── config/
+│   │   │   └── firebase.js
+│   │   ├── routes/
+│   │   ├── controllers/
+│   │   └── services/
 │   ├── index.js
-│   └── src/
+│   ├── package.json
+│   └── package-lock.json
 │
 ├── .gitignore
 └── README.md
