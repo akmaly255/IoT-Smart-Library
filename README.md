@@ -42,25 +42,25 @@ An IoT-based Smart Library system that integrates ESP32, RFID, and a Node.js bac
 
 ⚙️ Installation & Setup
     1️⃣ Clone Repository
-    ```bash
-    git clone https://github.com/akmaly255/IoT-Smart-Library.git
-    cd IoT-Smart-Library
-    ```
+```bash
+git clone https://github.com/akmaly255/IoT-Smart-Library.git
+cd IoT-Smart-Library
+```
     2️⃣ Backend Setup (Node.js)
-    ```bash
-    cd server
-    npm install
-    ```
+```bash
+cd server
+npm install
+```
     Create a .env file:
-    ```bash
-    GOOGLE_APPLICATION_CREDENTIALS=./serviceAccountKey.json
-    PORT=3000
-    ```
+```bash
+GOOGLE_APPLICATION_CREDENTIALS=./serviceAccountKey.json
+PORT=3000
+```
     ⚠️ Do NOT commit serviceAccountKey.json
-    ```bash
-    Run server:
-    npm start
-    ```
+```bash
+Run server:
+npm start
+```
 
     3️⃣ ESP32 Setup
     1. Open .ino files in Arduino IDE
