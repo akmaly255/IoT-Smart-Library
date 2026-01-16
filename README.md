@@ -32,7 +32,6 @@ IoT-Smart-Library/
 │   └── src/
 │
 ├── .gitignore
-├── .gitattributes
 └── README.md
 ```
 
