@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Books to Database</title>
+    <link rel="stylesheet" href="../styles/add-book-style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Tambah Buku Baru</h2>
+        <form id="book-form">
+          <label for="title">Judul Buku</label>
+          <input type="text" id="title" name="title" placeholder="Masukkan judul buku" required />
+    
+          <label for="author">Penulis</label>
+          <input type="text" id="author" name="author" placeholder="Masukkan nama penulis" required />
+    
+          <label>Kategori</label>
+          <div class="categories" id="categories-container">
+            <input
+              type="text"
+              class="category-input"
+              id="new-category"
+              placeholder="Tambah kategori baru"
+            />
+            <button type="button" class="btn-add-category" id="add-category-btn">+</button>
+          </div>
+          <div id="category-list" class="category-list"></div>
+    
+          <label for="status">Status</label>
+          <select id="status" name="status" required>
+            <option value="" disabled selected>Pilih status</option>
+            <option value="Tersedia">Tersedia</option>
+            <option value="Tidak Tersedia">Tidak Tersedia</option>
+          </select>
+    
+          <label for="cover">URL Cover</label>
+          <input type="url" id="cover" name="cover" placeholder="https://contoh.com/cover.jpg" />
+    
+          <label for="genre">Genre</label>
+          <input type="text" id="genre" name="genre" placeholder="Misal: Fiksi, Non-fiksi, dll" />
+    
+          <label for="isbn">ISBN</label>
+          <input type="text" id="isbn" name="isbn" placeholder="Nomor ISBN buku" />
+    
+          <label for="language">Bahasa</label>
+          <input type="text" id="language" name="language" placeholder="Misal: Indonesia, Inggris" />
+    
+          <label for="publisher">Penerbit</label>
+          <input type="text" id="publisher" name="publisher" placeholder="Nama penerbit" />
+    
+          <label for="shelf_location">Lokasi Rak</label>
+          <input type="text" id="shelf_location" name="shelf_location" placeholder="Misal: Rak A3" />
+          
+          <label for="book-uid">UID Buku</label>
+          <input type="text" id="uid" name="uid" placeholder="Masukan UID yang menempel pada buku">
+          <button type="submit">Tambah Buku</button>
+        </form>
+      </div>
+      <div id="popup-notification" class="popup-toast">Notification Message</div>
+      <script src="../scripts/add-book-script.js"></script>
+</body>
+</html>

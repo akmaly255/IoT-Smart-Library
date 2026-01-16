@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrowing Book System</title>
+    <link rel="stylesheet" href="../styles/borrow-return-style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Self-Service Books Borrowing System</h1>
+    
+        <div id="screen-welcome">
+            <h2>Welcome</h2>
+            <p id="book-prompt">Please scan book to start.</p>
+        </div>
+
+        <div id="screen-books" class="hidden">
+            <h2>Book(s) Scanned</h2>
+            <div id="book-list"></div>
+            <div class="button-wrapper" id="book-button">
+                <button onclick="cancelBooks()" class="cancel-button">cancel</button>
+                <button onclick="scanMember()" class="next-button">Next</button>
+            </div>
+        </div>
+
+        <div id="screen-member" class="hidden">
+            <h2>Member Information</h2>
+            <p id="member-prompt">Please scan your member card.</p>
+            <div class="button-wrapper" id="member-button">
+                <button onclick="cancelMember()" class="cancel-button">cancel</button>
+                <button onclick="finishBorrow()" class="hidden finish-button" id="finish-button">Finish</button>
+            </div>
+        </div>
+        
+        <div id="screen-status" class="hidden">
+            <h2 id="status-notification"></h2>
+            <div class="status-card">
+                <p><strong>Borrowed At: </strong> <span id="borrow-date">-</span></p>
+                <p><strong>Return Due Date: </strong> <span id="return-date">-</span></p>
+            </div>
+        </div>
+    </div>
+    <div id="popup-notification" class="popup-toast">Notification Message</div>
+    <script src="../scripts/borrow-script.js"></script>
+</body>
+</html>

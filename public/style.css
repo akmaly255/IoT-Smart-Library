@@ -1,0 +1,363 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    font-size: 13px;
+}
+html{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(254, 255, 255);
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.layar-dalam {
+    width: 1000px;
+    margin: auto;
+}
+.layar-penuh{
+    width: 100%;
+}
+nav{
+    z-index: 100;
+    color: rgb(24, 8, 201);
+    text-align: center;
+    position: fixed;
+    border-bottom: 1px solid #FFF;
+    line-height: 60px;
+    width: 100%;
+}
+nav.putih{
+    background-color: #e4deda(34, 12, 198);
+}
+nav .logo {
+    float: left;
+    position: relative;
+    line-height: 55px;
+    text-align: center;
+}
+nav .logo img {
+    vertical-align: middle;
+    width: 120px;
+}
+nav .menu {
+    float: right;
+    height: 60px;
+    max-width: 600px;
+}
+
+nav .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav .menu ul li {
+    list-style-type: none;
+    float: left;
+    line-height: 60px ;
+}
+nav ul li a {
+    color: #fff;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/*pengaturan header */
+header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    z-index: -2;
+}
+header .intro {
+    z-index: 100;
+    color: #FFF;
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
+header .intro h3 {
+    font-size: 50px;
+    margin: 10;
+    padding: 10;
+}
+.tombol {
+    background-color: #841515;
+    height: 40px;
+    line-height: 42px;
+    color: #FFF;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 20px 0px 20px;
+    font-size: 15px;
+    border-radius: 4px;
+}
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 10%;
+    z-index: -1;
+}
+.tombol-menu {
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+
+}
+.tombol-menu .garis{
+    height: 3px;
+    width: 100%;
+    background-color: #FFF;
+    margin: 3px 0;
+}
+section{
+    padding: 50px 0px 50px 0px;
+}
+section h3{
+    font-size: 30px;
+}
+section h3::after{
+    content: "";
+    border-bottom: 5px solid #c8c8c8;
+    width: 52px;
+    display: block;
+    margin: 20px auto;
+}
+#aboutus {
+    text-align: center;
+}
+section p.ringkasan {
+    font-style: italic;
+    font-size: 18px;
+    color: #52543a;
+}
+section .konten-isi p{
+    font-style: normal;
+}
+nav.putih {
+    background-color: #FFF;
+}
+nav.putih .tombol-menu .garis{
+    background-color: #333;
+}
+nav.logo img.hitam {
+    display: none;
+}
+@media screen and (max-width: 991.98px){
+    .layar-dalam{
+        width: 90%;
+    }
+    nav .menu ul {
+        display: none;
+        margin-top: 60px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    nav .menu ul li{
+        width: 100%;
+        border-bottom: 1px solid #c8c8c8;
+        background-color: #FFF;
+        line-height: 40px;
+    }
+    nav .menu ul li a{
+        color: #333;
+    }
+    .tombol-menu{
+        display: flex;
+    }
+}
+#hasilPencarian {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  font-size: 18px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Ini buat isi list ditengah */
+  gap: 15px;  /* jarak antar item */
+}
+
+#hasilPencarian li {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+  width: 40%;  /* atur lebar item */
+  max-width: 5000px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#hasilPencarian img {
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.detail-buku {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.search-box {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  #searchInput {
+    padding: 15px;
+    width: 400px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+
+  .search-box button {
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2c3e50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .kategori-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .category {
+    width: 150px;
+    height: 150px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .category img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+.categories-header {
+    font-size: 20px;
+    text-align: center;
+}  
+
+.daftar-buku {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align cards to top */
+    flex-wrap: wrap; /* Allow wrapping if many cards */
+    gap: 15px; /* spacing between cards */
+}
+
+.buku-item {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    width: auto; /* allow grow */
+    max-width: 400px; /* optional max width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.buku-item img {
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0; /* prevent shrinking */
+    margin-right: 15px;
+}
+
+.buku-info {
+    flex: 1; /* take remaining space */
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buku-item strong {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.buku-info small {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.status-tersedia {
+    color: green;
+    font-weight: 600;
+}
+
+.status-tidak {
+    color: red;
+    font-weight: 600;
+}  
+
+.book-info {
+    text-align: justify;
+}
+
+h1 {
+    font-size: 50px;
+}

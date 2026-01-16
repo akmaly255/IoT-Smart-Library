@@ -1,0 +1,78 @@
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+}
+
+.landing-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* Card Container */
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  padding: 60px 40px;
+  max-width: 640px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Titles */
+.main-title {
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #4b5563;
+  margin-bottom: 40px;
+}
+
+/* Button Grid */
+.action-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Buttons */
+.action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px 28px;
+  border-radius: 14px;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.action-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-3px);
+}
+
+.action-button:active {
+  transform: scale(0.97);
+}
+
+.icon {
+  font-size: 1.8rem;
+}

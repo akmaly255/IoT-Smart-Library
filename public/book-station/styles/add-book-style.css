@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafb;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+
+  /* Container */
+  .container {
+    background: #fff;
+    padding: 24px 32px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 480px;
+  }
+
+  /* Form title */
+  h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+  }
+
+  /* Form grid */
+  form {
+    display: grid;
+    gap: 16px;
+  }
+
+  label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+  }
+
+  input[type="text"],
+  input[type="url"],
+  input[type="number"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.8px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.25s ease;
+  }
+  input[type="text"]:focus,
+  input[type="url"]:focus,
+  input[type="number"]:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #3b82f6; /* blue-500 */
+    box-shadow: 0 0 6px #3b82f6aa;
+  }
+
+  /* Multi-category input container */
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .category-input {
+    flex: 1 1 70%;
+    min-width: 120px;
+  }
+
+  .btn-add-category {
+    background: #3b82f6;
+    border: none;
+    color: white;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 0 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 40px;
+    height: 38px;
+    align-self: center;
+  }
+  .btn-add-category:hover {
+    background: #2563eb;
+  }
+
+  .category-list {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .category-item {
+    background: #e0e7ff;
+    padding: 6px 10px 6px 16px; /* space for text and button */
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    font-size: 0.9rem;
+    color: #1e293b; /* slate-800 */
+    white-space: nowrap;
+  }
+  
+  .category-item button {
+    border: none;
+    background: transparent;
+    color: #1e293b;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 8px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    border-radius: 50%;
+    transition: background-shadow 0.2s, color 0.2s;
+  }
+  
+  .category-item button:hover {
+    color: #ef4444; /* red-500 */
+    background: rgba(0, 0, 0, 0.05);
+  }  
+
+  /* Submit button */
+  button[type="submit"] {
+    background: #10b981; /* green-500 */
+    border: none;
+    color: white;
+    font-weight: 700;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+
+  button[type="submit"]:hover {
+    background: #059669; /* green-600 */
+  }
+
+  .popup-toast {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  .popup-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+  }  

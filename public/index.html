@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Engineering Digital Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <div class="layar-utama">
+      <div class="logo">
+        <a href="#"><img src="assets/LogoUny.png" alt="Logo Uny" class="putih" /></a>
+      </div>
+      <div class="menu">
+        <a href="#" class="tombol-menu" aria-label="Toggle menu">
+          <span class="garis"></span>
+          <span class="garis"></span>
+          <span class="garis"></span>
+        </a>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#aboutus">About Us</a></li>
+          <li><a href="#support">Support</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="layar-penuh">
+    <header id="home">
+      <div class="overlay"></div>
+      <video autoplay muted loop playsinline>
+        <source src="assets/LibraryVideo.mp4" type="video/mp4" />
+        <!-- Fallback text -->
+        Your browser does not support the video tag.
+      </video>
+      <div class="intro">
+        <h1>Engineering Digital Library</h1>
+        <blockquote>
+          “Many a book is like a key to unknown chambers within the castle of one own self.” – Franz Kafka
+        </blockquote>
+        <p><a href="#" class="tombol">More Info</a></p>
+      </div>
+    </header>
+
+    <section class="search-section">
+      <div class="search-box">
+        <input id="searchInput" type="text" placeholder="Cari judul buku, penulis, atau topik..." />
+        <button type="button" onclick="cariBuku()">Cari</button>
+        <ul id="hasilPencarian"></ul>
+      </div>
+    </section>
+
+    <section class="categories-section">
+      <h2 class="categories-header">Kategori Buku</h2>
+      <div class="categories">
+        <div class="category">
+          <img src="assets/Book1.jpg" alt="Horror" />
+          <p>Horror</p>
+        </div>
+        <div class="category">
+          <img src="assets/Book2.jpg" alt="Psychology" />
+          <p>Psychology</p>
+        </div>
+        <div class="category">
+          <img src="assets/Book3.jpg" alt="Teknik" />
+          <p>Teknik</p>
+        </div>
+        <div class="category">
+          <img src="assets/Book4.jpg" alt="Budaya" />
+          <p>Budaya</p>
+        </div>
+        <div class="category">
+          <img src="assets/Book5.jpg" alt="Fiksi" />
+          <p>Fiksi</p>
+        </div>
+        <div class="category">
+          <img src="assets/Book6.jpg" alt="Bahasa" />
+          <p>Bahasa</p>
+        </div>
+        <div class="category">
+          <img src="assets/Book7.jpg" alt="Matematika" />
+          <p>Matematika</p>
+        </div>
+        <div class="category">
+          <img src="assets/Book8.jpg" alt="Fisika" />
+          <p>Fisika</p>
+        </div>
+        <div class="category">
+          <img src="assets/Book9.jpg" alt="Busana" />
+          <p>Busana</p>
+        </div>
+        <div class="category">
+          <img src="assets/Book1.jpg" alt="Tata Boga" />
+          <p>TataBoga</p>
+        </div>
+        <div class="category">
+          <img src="assets/Book2.jpg" alt="Mesin" />
+          <p>Mesin</p>
+        </div>
+        <div class="category">
+          <img src="assets/Book3.jpg" alt="Elektro" />
+          <p>Elektro</p>
+        </div>
+        <div class="category">
+          <img src="assets/Book4.jpg" alt="Otomotif" />
+          <p>Otomotif</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="daftar-buku" class="daftar-buku"></section>
+
+    <section id="aboutus">
+      <div class="layar-dalam">
+        <h2>About Us</h2>
+        <p class="ringkasan">Akmal Muhammad Yusuf, Annisa Fathiyatun N, Rodhiatul Adawiyah A</p>
+        <div class="konten-isi">
+          <p>
+            This website is for our IoT final project called
+            <strong>"Smart Library Infrastructure: Real-Time Book Tracker And Security System Using RFID Technology"</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous">
+  </script>
+  <script src="script.js"></script>
+  <script src="kategoribuku.js"></script>
+</body>
+</html>

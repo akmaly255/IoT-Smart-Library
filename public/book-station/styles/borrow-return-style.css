@@ -1,0 +1,296 @@
+/* Reset box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px 24px;
+  background-color: #f9fafb;  /* lighter background like Add Book app */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Container styles */
+.container {
+  background-color: #fff;      /* white card background */
+  max-width: 1200px;
+  width: 100%;
+  padding: 24px 32px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: justify;
+}
+
+/* Headings */
+h1, #screen-welcome, #member-prompt {
+  text-align: center;
+  color: #222;
+}
+
+h1 {
+  font-size: clamp(28px, 5vw, 48px);
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: clamp(22px, 4vw, 32px);
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+/* Screen spacing */
+.sceen {
+  margin-top: 2rem;
+}
+
+/* Hide with !important as original */
+.hidden {
+  display: none !important;
+}
+
+/* Book list container */
+#book-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+/* Book card */
+.book-card {
+  flex: 1 1 280px;
+  background-color: #fefefe;
+  padding: 16px;
+  border-radius: 12px;
+  max-width: 33%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.book-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Book item inside card */
+.book-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+/* Book image */
+.book-item img {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Book info text */
+.book-info p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.book-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+/* Member card styling */
+.member-card {
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: #fefefe;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 600px;
+  gap: 16px;
+  margin-bottom: 2rem;
+}
+
+.member-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.member-details p {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.member-details strong {
+  color: #222;
+}
+
+/* Status screen */
+#screen-status {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.status-card {
+  background-color: #e6ffe6;
+  padding: 20px 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: inline-block;
+  text-align: left;
+  margin-top: 1.5rem;
+  max-width: 600px;
+}
+
+.status-card p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #222;
+}
+
+#screen-status h2 {
+  color: #10b981;
+  margin-bottom: 1rem;
+}
+
+/* Buttons container */
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+/* General buttons */
+.next-button, .cancel-button, .finish-button {
+  background-color: #3b82f6;      /* blue-500 */
+  color: white;
+  font-weight: 700;
+  padding: 12px 12px;
+  border: none;
+  border-radius: 10px;            /* smooth rounded corners */
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
+  user-select: none;
+  display: inline-block;
+}
+
+.next-button:hover, .cancel-button:hover {
+  background-color: #2563eb;      /* blue-600 */
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.5);
+  transform: translateY(-2px);
+}
+
+.next-button:active, .cancel-button:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.4);
+}
+
+/* Special style for submit or borrow buttons */
+.finish-button {
+  background-color: #10b981;      /* green-500 */
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4);
+}
+
+.finish-button:hover {
+  background-color: #059669;      /* green-600 */
+  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.5);
+}
+
+.cancel-button{
+  background-color: #ef4444; /* red-500 */
+}
+
+/* Exit and delete buttons */
+.delete-button {
+  border: none;
+  background: transparent;
+  color: #374151;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+}
+.delete-button:hover {
+  color: #ef4444; /* red-500 */
+}
+
+.cancel-button:hover {
+  background-color: #b91c1c; /* dark red */
+  transform: translateY(-2px);
+}
+
+.cancel-button:active, .delete-button:active {
+  transform: scale(0.97);
+}
+
+/* Delete button positioning */
+.delete-button {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  padding: 0;
+  margin: 0;
+  font-size: 0.85rem;
+  /* box-shadow: 0 2px 6px rgba(239, 68, 68, 0.5); */
+}
+
+.member-card .delete-button {
+  top: 16px;
+  right: 16px;
+}
+
+/* Status text */
+.status-success {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.status-failed {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.popup-toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.popup-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}  
